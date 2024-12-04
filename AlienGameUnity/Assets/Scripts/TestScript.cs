@@ -22,6 +22,7 @@ public class TestScript : MonoBehaviour
     {
         //Debug.Log("Hello world!");
         //continuously moving char
-        transform.Translate(1, 1, 1);
+        //transform.Translate(1, 1, 1);
+        transform.Rotate(0, 1, 0);
     }
 }
