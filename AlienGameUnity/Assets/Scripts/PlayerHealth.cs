@@ -16,14 +16,20 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = startingHealth;
     }
 
-    /*public void ChangeHealth(int changeAmount)
+    public void ChangeHealth(int changeAmount)
     {
         currentHealth = currentHealth + changeAmount;
         currentHealth = Mathf.Clamp(currentHealth, 0, startingHealth);
-        if (currentHealth <= 0)
+        if (currentHealth == 0)
         {
             Kill();
         }
-    }*/
+    }
+
+    //this function is a custom function to give the current health to the calling code
+    public int GetHealth()
+    {
+        return currentHealth;
+    }
 
 }

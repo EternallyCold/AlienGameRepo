@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Hazard : MonoBehaviour
 {
+    public int hazardDamage = 10;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -12,7 +13,7 @@ public class Hazard : MonoBehaviour
         PlayerHealth player = collider.GetComponent<PlayerHealth>();
         if (player != null)
         {
-            player.Kill();
+            player.ChangeHealth(-hazardDamage);
         }
         
     }
